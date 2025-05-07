@@ -38,11 +38,13 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         holder.title.setText(recipe.getTitle());
         holder.description.setText(recipe.getDescription());
 
+        // Load image using Glide
         Glide.with(context)
                 .load(recipe.getImageUrl())
-                .placeholder(R.drawable.pizza)
+                .placeholder(R.drawable.pizza)          // default while loading
                 .into(holder.image);
 
+        // Item click opens detail activity
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, RecipeDetailActivity.class);
             intent.putExtra("title", recipe.getTitle());
@@ -50,8 +52,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
             intent.putExtra("imageUrl", recipe.getImageUrl());
             context.startActivity(intent);
         });
-
-
     }
 
     @Override
@@ -59,11 +59,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         return recipeList.size();
     }
 
-    public class RecipeViewHolder extends RecyclerView.ViewHolder {
+    public static class RecipeViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
         TextView title, description;
 
-        public RecipeViewHolder(View itemView) {
+        public RecipeViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.recipeImage);
             title = itemView.findViewById(R.id.recipeTitle);
