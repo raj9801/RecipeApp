@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Paneer Tikka",
+    "description": "Grilled chunks of paneer marinated in spices and yogurt.",
+    "imageUrl": "https://www.cookist.com/paneer-tikka/"
+  },
+  {
+    "id": 2,
+    "title": "Chole Bhature",
+    "description": "Spicy chickpea curry served with deep-fried bread.",
+    "imageUrl": "https://www.vecteezy.com/photo/15933043-chole-bhature-is-a-north-indian-food-dish-a-combination-of-chana-masala-and-bhatura-or-puri"
+  },
+  {
+    "id": 3,
+    "title": "Masala Dosa",
+    "description": "Crispy fermented rice crepe filled with spiced potatoes.",
+    "imageUrl": "https://vismaifood.com/en/mysore-masala-dosa-recipe-crispy-masala-dosa-how-make-perfect-mysore-masala-dosa-batter-home/print"
+  },
+  {
+    "id": 4,
+    "title": "Rajma Chawal",
+    "description": "Red kidney beans in thick curry served with steamed rice.",
+    "imageUrl": "https://www.secondrecipe.com/rajma-chawal/"
+  },
+  {
+    "id": 5,
+    "title": "Pav Bhaji",
+    "description": "Spiced mashed vegetables served with buttered buns.",
+    "imageUrl": "https://www.indianhealthyrecipes.com/pav-bhaji-recipe-how-to-make-pav-bhaji-step-by-step-pictures/"
+  },
+  {
+    "id": 6,
+    "title": "Veg Pulao",
+    "description": "Fragrant rice dish cooked with vegetables and spices.",
+    "imageUrl": "https://vegecravings.com/veg-pulao-recipe-vegetable-pilaf/"
+  },
+  {
+    "id": 7,
+    "title": "Aloo Paratha",
+    "description": "Flatbread stuffed with spicy mashed potatoes.",
+    "imageUrl": "https://www.smithakalluraya.com/2015/02/aloo-paratha-recipe-punjabi-aloo-paratha.html"
+  },
+  {
+    "id": 8,
+    "title": "Idli Sambhar",
+    "description": "Steamed rice cakes with a side of lentil soup.",
+    "imageUrl": "https://shwetainthekitchen.com/idli-sambar-recipe-tiffin-sambar/"
+  },
+  {
+    "id": 9,
+    "title": "Dhokla",
+    "description": "Savory steamed cake made with fermented gram flour.",
+    "imageUrl": "https://www.indianhealthyrecipes.com/khaman-dhokla/"
+  },
+  {
+    "id": 10,
+    "title": "Sev Usal",
+    "description": "Spicy curry topped with sev and served with pav.",
+    "imageUrl": "https://thecurrymommy.com/easy-sev-usal-recipe-with-store-bought-sev-packets/"
+  }
+]
