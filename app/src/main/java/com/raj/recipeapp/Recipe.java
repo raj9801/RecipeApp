@@ -5,15 +5,21 @@ public class Recipe {
     private String title;
     private String description;
     private String imageUrl;
+    private String ingredients;
+    private String steps;
 
-    // Empty constructor required for Firebase deserialization
-    public Recipe() {}
+    // Empty constructor required for Firebase
+    public Recipe() {
+    }
 
-    public Recipe(int id, String title, String description, String imageUrl) {
+    // Full constructor
+    public Recipe(int id, String title, String description, String imageUrl, String ingredients, String steps) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.ingredients = ingredients;
+        this.steps = steps;
     }
 
     // Getters
@@ -33,20 +39,12 @@ public class Recipe {
         return imageUrl;
     }
 
-    // Setters
-    public void setId(int id) {
-        this.id = id;
+    public String getIngredients() {
+        return ingredients;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public String getSteps() {
+        return steps;
     }
 }
+

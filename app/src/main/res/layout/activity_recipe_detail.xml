@@ -1,52 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@android:color/white"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-    <androidx.appcompat.widget.Toolbar
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:title="@string/app_name"
-        android:titleTextColor="@android:color/white"
-        android:gravity="center"
-        android:elevation="4dp" />
+        android:background="@color/header"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:title="Recipe Details" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/details_recipeImage"
+    <!-- Content Scroll -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:layout_margin="16dp"
-        android:scaleType="fitCenter" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <!-- Recipe Title -->
-    <TextView
-        android:id="@+id/details_recipeTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Recipe Title"
-        android:textColor="#212121"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="24dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <!-- Recipe Description -->
-    <TextView
-        android:id="@+id/details_recipeDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Recipe description goes here..."
-        android:textColor="#555555"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="24dp"
-        android:lineSpacingExtra="6dp"
-        android:paddingBottom="24dp" />
+            <!-- Recipe Image in Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                app:cardCornerRadius="18dp"
+                app:strokeWidth="1dp"
+                android:layout_marginTop="10dp"
+                app:strokeColor="@color/purple_200">
 
-</LinearLayout>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/details_recipeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/details_recipeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paneer Butter Masala"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/purple_800"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/details_recipeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rich, creamy, and full of flavor — perfect for any occasion."
+                android:textSize="15sp"
+                android:textColor="@color/gray_text"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Section Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/purple_100"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Ingredients Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/details_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Paneer\n• Tomato Puree\n• Cashew Cream\n• Spices\n• Butter"
+                android:textSize="15sp"
+                android:textColor="@color/text_black"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="18dp" />
+
+            <!-- Section Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/purple_100"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Instructions Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instructions"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/details_recipeFull"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Sauté onions and garlic\n2. Add tomato puree\n3. Mix in spices and cream\n4. Add paneer and simmer"
+                android:textSize="15sp"
+                android:textColor="@color/text_black"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="30dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
